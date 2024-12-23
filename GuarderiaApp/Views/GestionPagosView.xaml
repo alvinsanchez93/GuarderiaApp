@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="GuarderiaApp.Views.GestionPagosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto">
+    <Grid>
+        <TextBlock Text="Gestión de Pagos" FontSize="24" FontWeight="Bold" Margin="20"/>
+        <DataGrid x:Name="DataGridPagos" AutoGenerateColumns="False" Margin="20,80,20,100">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdPago}" Width="50"/>
+                <DataGridTextColumn Header="Alumno" Binding="{Binding Alumno}" Width="*"/>
+                <DataGridTextColumn Header="Fecha" Binding="{Binding FechaPago}" Width="150"/>
+                <DataGridTextColumn Header="Monto" Binding="{Binding Monto}" Width="100"/>
+                <DataGridTextColumn Header="Estado" Binding="{Binding Estado}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <Button Content="Registrar Pago" Width="150" Height="40" Margin="10"/>
+            <Button Content="Editar Pago" Width="150" Height="40" Margin="10"/>
+            <Button Content="Eliminar Pago" Width="150" Height="40" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

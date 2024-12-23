@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="GuarderiaApp.Views.GestionPersonalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Height="Auto" Width="Auto">
+    <Grid>
+        <TextBlock Text="Gestión de Personal" FontSize="24" FontWeight="Bold" Margin="20"/>
+        <DataGrid x:Name="DataGridPersonal" AutoGenerateColumns="False" Margin="20,80,20,100">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding IdPersonal}" Width="50"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding NombreCompleto}" Width="*"/>
+                <DataGridTextColumn Header="Cargo" Binding="{Binding Cargo}" Width="150"/>
+                <DataGridTextColumn Header="Teléfono" Binding="{Binding Telefono}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20">
+            <Button Content="Agregar Personal" Width="150" Height="40" Margin="10"/>
+            <Button Content="Editar Personal" Width="150" Height="40" Margin="10"/>
+            <Button Content="Eliminar Personal" Width="150" Height="40" Margin="10"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
